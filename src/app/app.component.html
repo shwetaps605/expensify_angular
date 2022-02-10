@@ -1,4 +1,6 @@
-<h1>{{title}}</h1>
-<app-expense-card></app-expense-card>
-<p>{{ number}}</p>
-<button (click)="viewRandomText()">Click Me</button>
+<app-expense-card [count]="number" (onReset)="resetCount()"></app-expense-card>
+<br>
+<button (click)="incrementCount()">Increment</button>
+<button (click)="decrementCount()">Decrement</button>
+
+

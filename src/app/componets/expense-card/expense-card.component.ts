@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-expense-card',
@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpenseCardComponent implements OnInit {
 
+  @Input() count!: number
+  @Output() onReset = new EventEmitter()
+
   total: number = 100
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClick() {
+    this.onReset.emit()
   }
 
 }

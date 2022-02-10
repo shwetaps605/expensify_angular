@@ -8,10 +8,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = "Counter"
   version:string = "v1"
-  number: number = 1
+  number: number = 0
 
-  viewRandomText(): void {
+  incrementCount(): void {
     this.number = this.number + 1
   }
-  
+
+  decrementCount(): void {
+    if(this.number == 0){
+      alert("No buddy, not any more!")
+      return
+    }
+    this.number = this.number - 1
+  }
+
+  resetCount(): void {
+    this.number = 0
+  }
+
 }
