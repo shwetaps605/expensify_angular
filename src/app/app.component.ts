@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'expense-tracker';
+  title: string = "Counter"
+  version:string = "v1"
+  number: number = 1
+
+  viewRandomText(): void {
+    this.number = this.number + 1
+  }
+  
 }
